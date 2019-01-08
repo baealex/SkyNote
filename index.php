@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="ko">
-    <title>메모장</title>
+    <title>Notepad</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#035">
@@ -17,11 +17,19 @@
         </form>
         </div>
         <div class="content">
-        <?php readfile("memo.txt"); ?>
+        <?php
+        session_start();
+        if(!isset($_SESSION['auth'])) {
+            echo "<li>볼 수 있는 권한이 없습니다.</li><li>'제작자 개새끼'를 입력해주세요!</li>"; 
+        }
+        else {
+            readfile("memo.txt");
+        }
+        ?>
         </div>
     </div>
     <footer>
-        <p>Copyright &copy; 2018 <a href="https://www.blex.kr">BLEX.</a></p>
+        <p>Copyright &copy; 2019 <a href="https://www.blex.kr">BLEX.</a></p>
     </footer>
     <script type="text/javascript">
     document.getElementById('default_focus').focus();
