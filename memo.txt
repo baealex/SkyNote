@@ -1,10 +1,8 @@
-<li>로그인 키워드는 자신만 알 수 있도록하세요.</li>
-<li>"로그아웃"하거나 화면을 "잠금"해보세요.</li>
-<li>"현재 메모 다운"이라고 입력해 보세요!</li>
-<li>메모를 다운로드 할 수 있는건 아시나요?</li>
-<li>"모든 메모 삭제"라고 입력하면 됩니다.</li>
-<li>삭제는 어떻게 하냐고요?</li>
-<li>&lt;a&gt;모든 태그&lt;/a&gt;는 문자로 변경되요!</li>
-<li>반응형으로 구현되어 어디에서나!</li>
-<li>감수성을 자극하는 심플한 노트 디자인</li>
-<li>PHP를 이용하여 제작된 간단 메모장</li>
+<li><p><img src="https://www.blex.kr/assets/images/history/notephpad/notephpad.png" alt="NotePHPad" /></p></li>
+<li><p>Qt에서 메세지 박스를 띄우기 위해선 <code>QMessageBox</code>를 쓰면 됩니다.</p></li>
+<li><p><a href="https://www.blex.kr">홈페이지</a> 링크입니다.</p></li>
+<li><h6>보라색</h6></li>
+<li><h5>파란색</h5></li>
+<li><h4>초록색</h4></li>
+<li><h3>노란색</h3></li>
+<li><h2>주황색</h2></li>

@@ -1,14 +1,15 @@
 <?php
+    include "lib/parsedown.php";
     extract($_POST);
 
-    $fr = fopen("./memo.txt", "r");
-    $text = fread($fr, filesize("./memo.txt"));
+    $fr = fopen("memo.txt", "r");
+    $text = fread($fr, filesize("memo.txt"));
 
-    if($memo !== "현재 메모 다운로드") {
+    if($memo !== "현재 메모 다운") {
         include "index.php";
     }
 
-    if($memo == "제작자 개새끼") {
+    if($memo == "비밀번호 486") {
         session_start();
         $_SESSION['auth'] = "auth-success";
         echo "<script>alert('안녕하세요. 관리자님 :)')</script>"; 
@@ -33,13 +34,13 @@
                     echo "<script>alert('수정 권한이 없습니다. :(')</script>"; 
                 }
                 else {
-                    $fw = fopen("./memo.txt", "w");
+                    $fw = fopen("memo.txt", "w");
                     fwrite($fw, "");
                     fclose($fw);
                 }
             }
             else if($memo == "현재 메모 다운") {
-                $GetLink = './memo.txt';
+                $GetLink = 'memo.txt';
                 $maxRead = 1 * 1024 * 1024;
                 $DownlooadName = 'memo.txt';
                 $fh = fopen($GetLink, 'r');
@@ -51,7 +52,7 @@
                 }
                 exit;   
             }
-            else {
+	    else {
                 if(strpos($memo, '<') !== false) {
                     $memo = str_replace('<', '&lt;', $memo);
                 }
@@ -59,12 +60,15 @@
                     $memo = str_replace('>', '&gt;', $memo);
                 }
 
-                $fw = fopen("./memo.txt", "w");
+                $Parsedown = new Parsedown();
+                $memo = $Parsedown->text("$memo");
+
+                $fw = fopen("memo.txt", "w");
                 fwrite($fw, "<li>$memo</li>\n".$text);
                 fclose($fw);
             }
         }
     }
 
-    echo "<script>document.location.href='http://memo.blex.kr';</script>"; 
+    echo "<script>document.location.href='/';</script>"; 
 ?>
