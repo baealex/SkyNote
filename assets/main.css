@@ -1,0 +1,283 @@
+@charset "utf-8";
+/*
+@font-face {
+    font-family: 'notokr-demilight';
+    font-style: normal;
+    font-weight: normal;
+    src: local('나눔바른고딕'), local('NanumBarunGothic'), local('나눔바른고딕OTF'),local('NanumBarunGothicOTF'), local('애플 SD 산돌고딕 Neo'), local('Apple SD Gothic Neo'), local('Noto Sans KR'),local('Noto+Sans'); 
+    src: url('https://happist.com/Font/notokr-demilight.eot'); 
+    src: url('https://happist.com/Font/notokr-demilight.eot?#iefix') format('embedded-opentype'),
+         url('https://happist.com/Font/notokr-demilight.woff2') format('woff2'), 
+         url('https://happist.com/Font/notokr-demilight.woff') format('woff'), 
+         url('https://happist.com/Font/notokr-demilight.ttf') format('truetype'),
+         url('https://happist.com/Font/notokr-demilight.svg') format('svg');
+}
+*/
+
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+i {
+    font-family: fontawesome !important;
+}
+
+@keyframes link_animation {0% {box-shadow: inset 0 -4px 0 #fc0;}100% {box-shadow: inset 0 -40px 0 #fc0;}}
+@-moz-keyframes link_animation {0% {box-shadow: inset 0 -4px 0 #fc0;}100% {box-shadow: inset 0 -40px 0 #fc0;}}
+@-webkit-keyframes link_animation {0% {box-shadow: inset 0 -4px 0 #fc0;}100% {box-shadow: inset 0 -40px 0 #fc0;}}
+@-o-keyframes link_animation {0% {box-shadow: inset 0 -4px 0 #fc0;}100% {box-shadow: inset 0 -40px 0 #fc0;}}
+
+@keyframes slide_bottom {0% {top: -100px;}100% {top: -10px;}}
+@-moz-keyframes slide_bottom {0% {top: -100px;}100% {top: -10px;}}
+@-webkit-keyframes slide_bottom {0% {top: -100px;}100% {top: -10px;}}
+@-o-keyframes slide_bottom {0% {top: -100px;}100% {top: -10px;}}
+
+.slide_bottom {
+    animation: slide_bottom .5s 1;
+    -moz-animation: slide_bottom .5s 1;
+    -webkit-animation: slide_bottom .5s 1;
+    -o-animation: slide_bottom .5s 
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, button, p, blockquote, pre, a, abbr, acronym, address, big, cite, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+{
+    font-family: 나눔바른고딕, NanumBarunGothic, 나눔바른고딕OTF, NanumBarunGothicOTF, '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Noto+Sans',  'notokr-demilight',  '맑은 고딕', 'Malgun Gothic', 'Helvetica Neue', Helvetica, Dotum, '돋움', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+button
+{
+    border: 0 none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+body {
+    background:#035;
+}
+
+#body {
+    overflow: hidden;
+    margin:0 auto;
+    margin-top: 70px;
+    width:50%;
+    background:#fff;
+    border-radius: 15px;
+}
+
+.info_box > button {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    left: 5px;
+    top: 5px;
+}
+
+.info_box > button > a > i {
+    color: #fff;
+    font-size: 30px;
+}
+
+.menu_box > button {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 5px;
+    top: 5px;
+}
+
+.menu_box > button > i {
+    color: #fff;
+    font-size: 30px;
+}
+
+#input_box {
+    position: relative;
+    width:100%;
+    text-align: center;
+    background: #FC0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#input_box > form > input {
+    height: 20px;
+    font-size: 1.2em;
+    height: 60px;
+    width: 96%;
+    min-width: 96%;
+    padding: 2%;
+    border-radius: 0;
+    line-height: 15px;
+    background-color: transparent;
+    color: black;
+    border: none;
+    outline: none;
+}
+
+.content {
+    padding: 40px;
+    min-height: 500px;
+}
+
+.content > li {
+    padding-top: 10px;
+    list-style-type: none;
+    font-size: 1.2em;
+    border-bottom: 1px solid #ccc;
+}
+
+.content > li > h1 {
+    color:#f40;
+}
+
+.content > li > h2 {
+    color:#f80;
+}
+
+.content > li > h3 {
+    color:#fc0;
+}
+
+.content > li > h4 {
+    color:#0a3;
+}
+
+.content > li > h5 {
+    color:#06f;
+}
+
+.content > li > h6 {
+    color:#c6f;
+}
+
+.content > li > p > a {
+    text-decoration: none;
+    color: #000;
+    box-shadow: inset 0 -4px 0 #fc0;
+}
+
+.content > li > p > a:hover {
+    animation: link_animation .5s 1;
+    -moz-animation: link_animation .5s 1;
+    -webkit-animation: link_animation .5s 1;
+    -o-animation: link_animation .5s 1;
+    box-shadow: inset 0 -40px 0 #fc0;
+}
+
+.content > li > p > code {
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.content > li > p > img {
+    max-width: 100%;
+}
+
+footer {
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+footer > p {
+    color:#fff;
+}
+
+footer > p > a {
+    color: #fc0;
+    text-decoration: none;
+}
+
+.infomation_modal {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.infomation_modal:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.infomation_modal > div {
+	position: absolute;
+	top: 30%;
+	left: 36%;
+	width: 24%;
+	height: 30%;
+    padding: 30px;
+    border-radius: 15px;
+	background-color: white;
+	overflow: auto;	
+}
+
+.infomation_modal > div > .info_close_btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: #000;
+    font-size: 20px;
+}
+
+.infomation_modal > div > h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.infomation_modal > div > p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.infomation_modal > div > a {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    #body {
+        width: 95%;
+    }
+
+    .info_box > button {
+        position: absolute;
+    }
+    
+    .menu_box > button {
+        position: absolute;
+    }    
+
+    #input_box > form > input {
+        font-size: 1em;
+    }
+
+    .content {
+        padding:20px;
+    }
+
+    .content > li {
+        font-size: 1em;
+    }
+
+    .infomation_modal > div {
+        top: 30%;
+        left: 5%;
+        width: 80%;
+        height: 40%;
+        padding: 20px;
+    }
+
+    .infomation_modal > div > p {
+        font-size: 1em;
+    }
+}
