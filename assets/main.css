@@ -29,11 +29,22 @@ i {
 @-webkit-keyframes slide_bottom {0% {top: -100px;}100% {top: -10px;}}
 @-o-keyframes slide_bottom {0% {top: -100px;}100% {top: -10px;}}
 
-.slide_bottom {
+@keyframes slide_left {0% {right: -220px;}100% {right: 0px;}}
+@-moz-keyframes slide_left {0% {right: -220px;}100% {right: 0px;}}
+@-webkit-keyframes slide_left {0% {right: -220px;}100% {right: 0px;}}
+@-o-keyframes slide_left {0% {right: -220px;}100% {right: 0px;}}
+
+::-webkit-scrollbar
+{ 
+    display: none; 
+}
+
+.slide_bottom
+{
     animation: slide_bottom .5s 1;
     -moz-animation: slide_bottom .5s 1;
     -webkit-animation: slide_bottom .5s 1;
-    -o-animation: slide_bottom .5s 
+    -o-animation: slide_bottom .5s 1;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, button, p, blockquote, pre, a, abbr, acronym, address, big, cite, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
@@ -87,7 +98,7 @@ body {
     top: 5px;
 }
 
-.menu_box > button > i {
+.menu_box > button > a > i {
     color: #fff;
     font-size: 30px;
 }
@@ -103,7 +114,7 @@ body {
 
 #input_box > form > input {
     height: 20px;
-    font-size: 1.2em;
+    font-size: 1.1em;
     height: 60px;
     width: 96%;
     min-width: 96%;
@@ -124,7 +135,7 @@ body {
 .content > li {
     padding-top: 10px;
     list-style-type: none;
-    font-size: 1.2em;
+    font-size: 1.1em;
     border-bottom: 1px solid #ccc;
 }
 
@@ -166,8 +177,14 @@ body {
     box-shadow: inset 0 -40px 0 #fc0;
 }
 
+.content > li > pre {
+    background-color: #eee;
+    white-space: pre-wrap;
+    border-radius: 5px;
+}
+
 .content > li > p > code {
-    background-color: #ccc;
+    background-color: #ddd;
     border-radius: 5px;
 }
 
@@ -190,14 +207,89 @@ footer > p > a {
     text-decoration: none;
 }
 
-.infomation_modal {
+.source_code {
+    opacity: 0;
+}
+
+.source_code:target {
+    opacity: 1;
+}
+
+.menu_modal {
     position: fixed;
     z-index: 9999;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.7);
+    opacity:0;
+    background: rgba(0,0,0,.8);
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.menu_modal:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.menu_modal > div {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 220px;
+	height: 100%;
+    padding: 30px;
+    border-radius: 0px;
+	background-color: white;
+    overflow: auto;
+}
+
+.menu_modal:target > div {
+    animation: slide_left .5s 1;
+    -moz-animation: slide_left .5s 1;
+    -webkit-animation: slide_left .5s 1;
+    -o-animation: slide_left .5s 1;
+}
+
+.menu_modal > div > .close_btn {
+    position: fixed;
+    top: 12px;
+    right: 300px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.menu_modal > div > p {
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+
+.menu_modal > div > hr {
+    margin-bottom: 30px;
+}
+
+.menu_modal > div > p > a {
+    text-decoration: none;
+    color: #777;
+}
+
+.menu_modal > div > p > a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.source_modal {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
     opacity:0;
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
@@ -205,43 +297,42 @@ footer > p > a {
     pointer-events: none;
 }
 
-.infomation_modal:target {
+.source_modal:target {
     opacity:1;
     pointer-events: auto;
 }
 
-.infomation_modal > div {
+.source_modal > div {
 	position: absolute;
-	top: 30%;
-	left: 36%;
-	width: 24%;
-	height: 30%;
-    padding: 30px;
-    border-radius: 15px;
-	background-color: white;
-	overflow: auto;	
+	top: 26%;
+    left: 30%;
+    right: 30%;
+	width: auto;
+    height: auto;
+	border-radius: 5px;
+	background-color: #282A36;
+    overflow: auto;
 }
 
-.infomation_modal > div > .info_close_btn {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    color: #000;
-    font-size: 20px;
+.source_modal > div > form > p {
+    padding: 20px;
 }
 
-.infomation_modal > div > h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+.source_modal > div a {
+    float: right;
 }
 
-.infomation_modal > div > p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
+.source_modal i {
+    font-size: 25px;
+    color: #777;
 }
 
-.infomation_modal > div > a {
-    text-decoration: none;
+.source_modal i:hover {
+    color: #fff;
+}
+
+.source_modal > div > form > p > input {
+    float: right;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -269,15 +360,16 @@ footer > p > a {
         font-size: 1em;
     }
 
-    .infomation_modal > div {
-        top: 30%;
-        left: 5%;
-        width: 80%;
-        height: 40%;
-        padding: 20px;
+    .menu_modal > div > p {
+        text-align: center;
+        font-size: 1.1em;
+        margin-bottom: 30px;
     }
 
-    .infomation_modal > div > p {
-        font-size: 1em;
+    .source_modal > div {
+        position: absolute;
+        top: 25%;
+        left: 5%;
+        right: 5%;
     }
 }

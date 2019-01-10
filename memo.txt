@@ -1,8 +1,10 @@
-<li><p><img src="https://www.blex.kr/assets/images/history/notephpad/notephpad.png" alt="NotePHPad" /></p></li>
-<li><p>Qt에서 메세지 박스를 띄우기 위해선 <code>QMessageBox</code>를 쓰면 됩니다.</p></li>
-<li><p><a href="https://www.blex.kr">홈페이지</a> 링크입니다.</p></li>
-<li><h6>보라색</h6></li>
-<li><h5>파란색</h5></li>
-<li><h4>초록색</h4></li>
-<li><h3>노란색</h3></li>
-<li><h2>주황색</h2></li>
+<li><br/></li>
+<li style="text-align:center;"><p>로그아웃 하고 싶다면</p></li>
+<li style="text-align:center;"><p>"로그아웃" 또는 "잠금"</p></li>
+<li><br/></li>
+<li style="text-align:center;"><p>메모를 다운하고 싶다면</p></li>
+<li style="text-align:center;"><p>"현재 메모 다운"</p></li>
+<li><br/></li>
+<li style="text-align:center;"><p>메모를 지우고 싶다면</p></li>
+<li style="text-align:center;"><p>"모든 메모 삭제"</p></li>
+<li><br/></li>

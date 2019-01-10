@@ -9,7 +9,7 @@
         include "index.php";
     }
 
-    if($memo == "비밀번호 486") {
+    if($memo == "난 파도가 머물던 모래 위에 적힌 글씨처럼") {
         session_start();
         $_SESSION['auth'] = "auth-success";
         echo "<script>alert('안녕하세요. 관리자님 :)')</script>"; 
@@ -25,19 +25,13 @@
     else {
         session_start();
         if(!isset($_SESSION['auth'])) {
-            echo "<script>alert('수정 권한이 없습니다. :(')</script>"; 
+            echo "<script>alert('수정 권한이 없습니다 :(')</script>"; 
         }
         else {
             if($memo == "모든 메모 삭제") {
-                session_start();
-                if(!isset($_SESSION['auth'])) {
-                    echo "<script>alert('수정 권한이 없습니다. :(')</script>"; 
-                }
-                else {
-                    $fw = fopen("memo.txt", "w");
-                    fwrite($fw, "");
-                    fclose($fw);
-                }
+                $fw = fopen("memo.txt", "w");
+                fwrite($fw, "");
+                fclose($fw);
             }
             else if($memo == "현재 메모 다운") {
                 $GetLink = 'memo.txt';
@@ -52,7 +46,7 @@
                 }
                 exit;   
             }
-	    else {
+	        else {
                 if(strpos($memo, '<') !== false) {
                     $memo = str_replace('<', '&lt;', $memo);
                 }
@@ -61,7 +55,16 @@
                 }
 
                 $Parsedown = new Parsedown();
-                $memo = $Parsedown->text("$memo");
+
+                if($memo == '' && $source == '') {
+                    $memo = "<br/>";
+                }
+                else if($memo == '' && $source !== '') {
+                    $memo = $Parsedown->text("```\n$source\n```");
+                }
+                else if($memo !== '' && $source == '') {
+                    $memo = $Parsedown->text("$memo");
+                }
 
                 $fw = fopen("memo.txt", "w");
                 fwrite($fw, "<li>$memo</li>\n".$text);
