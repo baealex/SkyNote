@@ -52,6 +52,9 @@ location ~ \.txt$ {
   - 소스코드 textarea에 `codemirror` 라이브러리 적용
   - 로그인 되지 않지 않은 사용자에게 `basic.txt`를 노출
 
+- 2019-01-14
+  - 메모를 위에서 삽입할지 아래서 삽입할지 결정한 메뉴 추가
+
 ## 개발자 정보	
 
 Jino Bae. – [BLOG](https://www.blex.kr/) – bae_alex@naver.com

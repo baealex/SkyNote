@@ -44,7 +44,7 @@
                     echo fread($fh, $maxRead);
                     ob_flush();
                 }
-                exit;   
+                exit;
             }
 	        else {
                 if(strpos($memo, '<') !== false) {
@@ -66,8 +66,16 @@
                     $memo = $Parsedown->text("$memo");
                 }
 
+                $fr = fopen("assets/config.ini", "r");
+                $config = fread($fr, filesize("assets/config.ini"));
+
                 $fw = fopen("memo.txt", "w");
-                fwrite($fw, "<li>$memo</li>\n".$text);
+                if($config == 1) {
+                    fwrite($fw, $text."\n<li>$memo</li>");
+                }
+                else {
+                    fwrite($fw, "<li>$memo</li>\n".$text);
+                }
                 fclose($fw);
             }
         }

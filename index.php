@@ -38,9 +38,10 @@
                 <div>
                     <a class="close_btn" href="/"><i class="fas fa-times"></i></a>
                     <p><a href="#Source">소스코드 삽입</a></p>
-                    <p><a href="mailto:bae_alex@naver.com">의견이 있으세요?</a></p>
-                    <p><a href="https://www.blex.kr/donate.png" target="_blank">커피한잔 사주세요!</a></p>
+                    <p><a href="config.php">메모 반대로 삽입</a></p>
                     <hr>
+                    <p><a href="mailto:bae_alex@naver.com">의견이 있으세요?</a></p>
+                    <p><a href="" onclick="window.open('https://www.blex.kr/donate.png','Donate','width=480,height=720,location=no,status=no,scrollbars=yes');">커피한잔 사주세요!</a></p>
                 </div>
             </div>
             <div class="source_modal" id="Source">
