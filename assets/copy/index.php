@@ -21,13 +21,13 @@
 <body>
     <div id="body">
         <div id="input_box">
-            <form method="post" action="login.php">
+            <form method="post" action="write.php">
                 <input id="default_focus" autocomplete="off" type="text" name="memo">
             </form>
         </div>
         <div class="info_box">
             <button type="button">
-                <a href="https://github.com/baealex/NotePHPad/blob/master/README.md" target="_blank"><i class="fas fa-info-circle"></i></a>
+                <a href="/"><i class="fas fa-home"></i></a>
             </button>
         </div>
         <div class="menu_box">
@@ -36,12 +36,22 @@
             </button>
             <div class="menu_modal" id="Menu">
                 <div>
-                    <a class="close_btn" href="/"><i class="fas fa-times"></i></a>
-                    <p><a href="new.php">새로운 메모 생성</a></p>
-                    <p><a href="config.php">메모 반대로 삽입</a></p>
+                    <a class="close_btn" href="./"><i class="fas fa-times"></i></a>
+                    <p><a href="#Source">소스코드 삽입</a></p>
                     <hr>
                     <p><a href="mailto:bae_alex@naver.com">의견이 있으세요?</a></p>
                     <p><a href="https://www.blex.kr/donate-kakaopay">커피한잔 사주세요!</a></p>
+                </div>
+            </div>
+            <div class="source_modal" id="Source">
+                <div>
+                    <form method="post" action="write.php">
+                        <textarea id="source_code" name="source" placeholder="```&#13;&#10;#include <iostream>&#13;&#10;int main(void)&#13;&#10;{&#13;&#10;    int a = 0;&#13;&#10;    std::cout << a << std::endl;&#13;&#10;    return 0;&#13;&#10;}&#13;&#10;```"></textarea>
+                        <p>
+                            <button name="submit" id="submit"><i class="fas fa-check"></i></button>
+                            <a class="close_btn" href="./"><i class="fas fa-times"></i></a>
+                        </p>
+                    </form>
                 </div>
             </div>
         </div>
@@ -49,30 +59,17 @@
             <?php
                 session_start();
                 if(!isset($_SESSION['auth'])) {
-                    readfile("basic.txt");
+                    readfile("../basic.txt");
                     echo "
                     <script type='text/javascript'>
                     document.getElementById('default_focus').placeholder = '권한이 없습니다. 로그인해 주세요.';
                     </script>";
                 }
                 else {
-                    $dir = "./";
-                    echo '<li><h5>작성된 메모 리스트</h5></li>';
-                    if(file_exists($dir)) {
-                        if($dh = opendir($dir)) {
-                            while(($file = readdir($dh)) !== false) {
-                                if(( $file !== '.well-known' && strpos($file,'-'))) {
-                                    echo "<li><p><a href='".$dir.$file."'>".$file."</a></p></li>";
-                                }
-                            }
-                            closedir($dh);
-                        }
-                    } else {
-                        echo "<p>ERROR / 제작자에게 <a href=\"mailto:bae_alex@naver.com\">문의</a>하세요.</p>";
-                    }
+                    readfile("memo.txt");
                     echo "
                     <script type='text/javascript'>
-                    document.getElementById('default_focus').placeholder = '로그인 되었습니다.';
+                    document.getElementById('default_focus').placeholder = '메모 입력 후 엔터!';
                     </script>";
                 }
             ?>

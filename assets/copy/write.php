@@ -1,5 +1,5 @@
 <?php
-    include "lib/parsedown.php";
+    include "../lib/parsedown.php";
     extract($_POST);
 
     $fr = fopen("memo.txt", "r");
@@ -9,13 +9,7 @@
         include "index.php";
     }
 
-    if($memo == "난 파도가 머물던 모래 위에 적힌 글씨처럼") {
-        session_start();
-        $_SESSION['auth'] = "auth-success";
-        echo "<script>alert('안녕하세요. 관리자님 :)')</script>"; 
-    }
-
-    else if($memo == "로그아웃" || $memo == "잠금") {
+    if($memo == "로그아웃" || $memo == "잠금") {
         session_start();
         unset($_SESSION['auth']);
         session_destroy();
@@ -66,8 +60,8 @@
                     $memo = $Parsedown->text("$memo");
                 }
 
-                $fr = fopen("assets/config.ini", "r");
-                $config = fread($fr, filesize("assets/config.ini"));
+                $fr = fopen("../assets/config.ini", "r");
+                $config = fread($fr, filesize("../assets/config.ini"));
 
                 $fw = fopen("memo.txt", "w");
                 if($config == 1) {
@@ -81,5 +75,5 @@
         }
     }
 
-    echo "<script>document.location.href='/';</script>"; 
+    echo "<script>document.location.href='./';</script>"; 
 ?>

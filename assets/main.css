@@ -133,6 +133,7 @@ body {
 }
 
 .content > li {
+    min-height: 25px;
     padding-top: 10px;
     list-style-type: none;
     font-size: 1.1em;
