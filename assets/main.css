@@ -71,7 +71,7 @@ body {
 #body {
     overflow: hidden;
     margin:0 auto;
-    margin-top: 70px;
+    margin-top: 150px;
     width:50%;
     background:#fff;
     border-radius: 15px;
@@ -104,8 +104,10 @@ body {
 }
 
 #input_box {
-    position: relative;
-    width:100%;
+    position: absolute;
+    width:50%;
+    height: 100px;
+    top: 70px;
     text-align: center;
     background: #FC0;
     border-top-left-radius: 15px;
@@ -113,12 +115,11 @@ body {
 }
 
 #input_box > form > input {
-    height: 20px;
     font-size: 1.1em;
     height: 60px;
     width: 96%;
     min-width: 96%;
-    padding: 2%;
+    padding: 20px;
     border-radius: 0;
     line-height: 15px;
     background-color: transparent;
@@ -339,6 +340,7 @@ footer > p > a {
 @media only screen and (max-width: 1200px) {
     #body {
         width: 95%;
+        margin-top: 130px;
     }
 
     .info_box > button {
@@ -347,10 +349,16 @@ footer > p > a {
     
     .menu_box > button {
         position: absolute;
-    }    
+    }
+
+    #input_box {
+        width:95%;
+        height: 80px;
+    }
 
     #input_box > form > input {
         font-size: 1em;
+        padding: 12px;
     }
 
     .content {

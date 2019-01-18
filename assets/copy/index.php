@@ -59,11 +59,7 @@
             <?php
                 session_start();
                 if(!isset($_SESSION['auth'])) {
-                    readfile("../basic.txt");
-                    echo "
-                    <script type='text/javascript'>
-                    document.getElementById('default_focus').placeholder = '권한이 없습니다. 로그인해 주세요.';
-                    </script>";
+                    echo "<script>document.location.href='/';</script>";
                 }
                 else {
                     readfile("memo.txt");
@@ -83,30 +79,15 @@
     </script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
     <script type="text/javascript">
-    $(document).ready(function(){ 
-        var mql = window.matchMedia("screen and (max-width: 1200px)");
-
+    $(document).ready(function(){
         input_box = document.getElementById("input_box");
-        body = document.getElementById("body");
         $(window).scroll(function () {
             if ($(this).scrollTop() < 200) {
-                body.style.marginTop="70px";
-                input_box.style.position="relative";
-                input_box.style.width="100%";
-                input_box.style.top="0px";
+                input_box.style.position="absolute";
+                input_box.style.top="70px";
                 $("#input_box").removeClass("slide_bottom");
             } else {
-                if (mql.matches) {
-                    body.style.marginTop="140px";
-                } else {
-                    body.style.marginTop="170px";
-                }
                 input_box.style.position="fixed";
-                if (mql.matches) {
-                    input_box.style.width="95%";
-                } else {
-                    input_box.style.width="50%";
-                }
                 input_box.style.top="-10px";
                 $("#input_box").addClass("slide_bottom");
             }
@@ -122,5 +103,12 @@
         val: textarea.value
     });
     </script>
+    <?php
+        $fr = fopen("../assets/config.ini", "r");
+        $config = fread($fr, filesize("../assets/config.ini"));
+        if($config == 1) {
+            echo "<script>window.scrollTo(0,screen.height+9999);</script>";
+        }
+    ?>
 </body>
 </html>

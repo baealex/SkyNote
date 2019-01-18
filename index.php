@@ -22,7 +22,7 @@
     <div id="body">
         <div id="input_box">
             <form method="post" action="login.php">
-                <input id="default_focus" autocomplete="off" type="text" name="memo">
+                <input id="default_focus" autocomplete="off" type="password" name="memo">
             </form>
         </div>
         <div class="info_box">
@@ -86,30 +86,15 @@
     </script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
     <script type="text/javascript">
-    $(document).ready(function(){ 
-        var mql = window.matchMedia("screen and (max-width: 1200px)");
-
+    $(document).ready(function(){
         input_box = document.getElementById("input_box");
-        body = document.getElementById("body");
         $(window).scroll(function () {
             if ($(this).scrollTop() < 200) {
-                body.style.marginTop="70px";
-                input_box.style.position="relative";
-                input_box.style.width="100%";
-                input_box.style.top="0px";
+                input_box.style.position="absolute";
+                input_box.style.top="70px";
                 $("#input_box").removeClass("slide_bottom");
             } else {
-                if (mql.matches) {
-                    body.style.marginTop="140px";
-                } else {
-                    body.style.marginTop="170px";
-                }
                 input_box.style.position="fixed";
-                if (mql.matches) {
-                    input_box.style.width="95%";
-                } else {
-                    input_box.style.width="50%";
-                }
                 input_box.style.top="-10px";
                 $("#input_box").addClass("slide_bottom");
             }
