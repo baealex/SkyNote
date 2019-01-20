@@ -6,17 +6,42 @@
 
 ## 설치 방법	
 
-웹서버(Nginx)와 PHP7이 필요합니다. [블로그](https://www.blex.kr/web-server/2019/01/03/Ubuntu-16.04-WebServer-1-Nginx.html) 참고.	
+웹서버(Nginx)와 PHP7이 필요합니다.
 
-또한 웹서버에서 텍스트 파일을 참조하지 못하도록 변경해야 합니다.	
+```
+sudo apt-get install nginx php7-fpm
+```
 
-```	
-location ~ \.txt$ {	
-    return 403;	
-}	
-```	
+설치가 완료되었다면 Nginx의 설정파일을 수정합니다.
 
-최초 비밀번호는 `난 파도가 머물던 모래 위에 적힌 글씨처럼`입니다!
+```
+sudo vi /etc/nginx/sites-available/default
+```
+
+```
+server {
+    ...
+    server_name memo.domain.com;
+    root /home/user/memo;
+    ...
+    index index.html index.php;
+    ...
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+    }
+    ...
+    location ~ \.txt$ {	
+        return 403;	
+    }
+}
+```
+
+지정한 루트경로에 해당 소스코드를 삽입하고, PHP를 사용할 수 있도록 해줍니다. 또한 외부에서 텍스트 파일에 접근하지 못하도록 설정하였습니다.
+
+![bandicam 2019-01-20 13-21-42-773](https://user-images.githubusercontent.com/35596687/51435234-6a074e00-1cb6-11e9-8b18-47e1f5901e70.png)
+
+최초 비밀번호는 `baealex`입니다!
 
 ## 상세 설명	
 
@@ -63,6 +88,10 @@ location ~ \.txt$ {
   - 입력 상자의 레이아웃 `Absolute`로 변경
   - 비로그인 상태에서는 루트 페이지로 강제 이동
   - 메인 페이지의 입력 상자의 타입을 `Password`로 변경
+
+- 2019-01-20
+  - 기본 글씨체 '나눔 펜'으로 변경
+  - 메인 페이지에서 해당 메모의 미리보기 제공
 
 ## 개발자 정보	
 
