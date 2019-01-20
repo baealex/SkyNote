@@ -13,7 +13,7 @@
          url('https://happist.com/Font/notokr-demilight.svg') format('svg');
 }
 */
-
+@import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script');
 @import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 i {
     font-family: fontawesome !important;
@@ -47,9 +47,9 @@ i {
     -o-animation: slide_bottom .5s 1;
 }
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, button, p, blockquote, pre, a, abbr, acronym, address, big, cite, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, button, p, blockquote, pre, code, a, abbr, acronym, address, big, cite, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
 {
-    font-family: 나눔바른고딕, NanumBarunGothic, 나눔바른고딕OTF, NanumBarunGothicOTF, '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Noto+Sans',  'notokr-demilight',  '맑은 고딕', 'Malgun Gothic', 'Helvetica Neue', Helvetica, Dotum, '돋움', sans-serif !important;
+    font-family: 'Nanum Pen Script', 나눔바른고딕, NanumBarunGothic, 나눔바른고딕OTF, NanumBarunGothicOTF, '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Noto+Sans',  'notokr-demilight',  '맑은 고딕', 'Malgun Gothic', 'Helvetica Neue', Helvetica, Dotum, '돋움', sans-serif !important;
     margin: 0;
     padding: 0;
     border: 0;
@@ -129,6 +129,7 @@ body {
 }
 
 .content {
+
     padding: 40px;
     min-height: 500px;
 }
@@ -137,7 +138,7 @@ body {
     min-height: 25px;
     padding-top: 10px;
     list-style-type: none;
-    font-size: 1.1em;
+    font-size: 1.3em;
     border-bottom: 1px solid #ccc;
 }
 
@@ -266,7 +267,7 @@ footer > p > a {
 
 .menu_modal > div > p {
     text-align: center;
-    font-size: 1em;
+    font-size: 1.5em;
     margin-bottom: 30px;
 }
 
@@ -365,13 +366,8 @@ footer > p > a {
         padding:20px;
     }
 
-    .content > li {
-        font-size: 1em;
-    }
-
     .menu_modal > div > p {
         text-align: center;
-        font-size: 1.1em;
         margin-bottom: 30px;
     }
 
