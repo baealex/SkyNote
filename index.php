@@ -62,7 +62,11 @@
                         if($dh = opendir($dir)) {
                             while(($file = readdir($dh)) !== false) {
                                 if(( $file !== '.well-known' && strpos($file,'-'))) {
-                                    echo "<li><p><a href='".$dir.$file."'>".$file."</a></p></li>";
+                                    $fr = fopen("$file/memo.txt", "r");
+                                    $text = fread($fr, filesize("$file/memo.txt"));
+                                    $text = strip_tags($text);
+                                    $descript = substr($text, 0, 30);
+                                    echo "<li><p><a href='".$dir.$file."'>".$file."</a> : $descript...</p></li>";
                                 }
                             }
                             closedir($dh);
