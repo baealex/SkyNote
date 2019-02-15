@@ -102,4 +102,4 @@ server {
 
 ## 개발자 정보	
 
-Jino Bae. – [BLOG](https://www.blex.kr) – me@blex.kr
+Jino Bae. – [BLOG](https://www.blex.kr) – bae_alex@naver.com

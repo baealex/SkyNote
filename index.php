@@ -36,7 +36,7 @@
             </button>
             <div class="menu_modal" id="Menu">
                 <div>
-                    <a class="close_btn" href="/"><i class="fas fa-times"></i></a>
+                    <a class="close_btn" href="./"><i class="fas fa-times"></i></a>
                     <p><a href="new.php">새로운 메모 생성</a></p>
                     <p><a href="config.php">메모 반대로 삽입</a></p>
                     <hr>

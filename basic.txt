@@ -19,17 +19,15 @@ int main(void)
 <li><p><a href="https://github.com/erusev/parsedown">Parsedown</a>을 이용하고 있습니다.</p></li>
 <li><br/></li>
 <li><br/></li>
-<li style="text-align:center;"><h6>꽃 - 김춘수</h6></li>
+<li style="text-align:center;"><p>신은 인간에게 선물을 줄 때</p></li>
+<li style="text-align:center;"><p>시련이라는 포장지에 싸서 주고</p></li>
+<li style="text-align:center;"><p>큰 선물일수록 큰 포장지에 쌓아놓는다.</p></li>
 <li><br/></li>
-<li style="text-align:center;"><p>내가 그의 이름을</p></li>
-<li style="text-align:center;"><p>불러주기 전에는</p></li>
-<li style="text-align:center;"><p>그는 다만 하나의</p></li>
-<li style="text-align:center;"><p>몸짓에 지나지 않았다.</p></li>
+<li style="text-align:center;"><p>하늘이 장차 큰 인물이 될 사람에게는</p></li>
+<li style="text-align:center;"><p>그 뼈를 아프게하고, 굶주리게 하고 시련을 주어</p></li>
+<li style="text-align:center;"><p>장차 큰 사명을 감당할 자격이 있는지를 시험하나니.</p></li>
 <li><br/></li>
-<li style="text-align:center;"><p>내가 그의 이름을</p></li>
-<li style="text-align:center;"><p>불러주었을 때</p></li>
-<li style="text-align:center;"><p>그는 나에게로 와서</p></li>
-<li style="text-align:center;"><p>꽃이 되었다.</p></li>
+<li style="text-align:center;"><p>혹시라도 큰 시련이 있거든,</p></li>
+<li style="text-align:center;"><p>내가 하늘의 선택을 받은자가 아닌지 생각해보라.</p></li>
 <li><br/></li>
 <li><br/></li>
-<li><p><img src="https://www.blex.kr/assets/images/history/notephpad/notephpad.png" alt="NotePHPad" /></p></li>
