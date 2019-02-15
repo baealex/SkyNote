@@ -16,5 +16,5 @@
             echo "<script>alert('이미 오늘의 메모가 생성되었습니다.')</script>"; 
         }
     }
-    echo "<script>document.location.href='/';</script>"; 
+    echo "<script>document.location.href='./';</script>"; 
 ?>

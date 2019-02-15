@@ -18,5 +18,5 @@
         }
         fclose($fw);
     }
-    echo "<script>document.location.href='/';</script>"; 
+    echo "<script>document.location.href='./';</script>"; 
 ?>

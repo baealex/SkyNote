@@ -23,5 +23,5 @@
             echo "<script>alert('이곳엔 메모를 작성할 수 없어요 :(')</script>";
         }
     }
-    echo "<script>document.location.href='/';</script>"; 
+    echo "<script>document.location.href='./';</script>"; 
 ?>
