@@ -97,6 +97,9 @@ server {
   - 기본 글씨체 '나눔 펜'으로 변경
   - 메인 페이지에서 해당 메모의 미리보기 제공
 
+- 2019-02-15
+  - 반응형 링크로 변경
+
 ## 개발자 정보	
 
-Jino Bae. – [BLOG](https://www.blex.kr/) – bae_alex@naver.com
+Jino Bae. – [BLOG](https://www.blex.kr) – me@blex.kr
