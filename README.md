@@ -100,6 +100,10 @@ server {
 - 2019-02-15
   - 반응형 링크로 변경
 
+- 2019-03-12
+  - 카피라이트 문구 변경
+  - 이메일 주소 변경
+
 ## 개발자 정보	
 
-Jino Bae. – [BLOG](https://www.blex.kr) – bae_alex@naver.com
+Jino Bae. – [BLOG](https://baejino.com) – im@baejino.com
