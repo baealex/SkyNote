@@ -40,8 +40,8 @@
                     <p><a href="new.php">새로운 메모 생성</a></p>
                     <p><a href="config.php">메모 반대로 삽입</a></p>
                     <hr>
-                    <p><a href="mailto:bae_alex@naver.com">의견이 있으세요?</a></p>
-                    <p><a href="https://www.blex.kr/donate-kakaopay">커피한잔 사주세요!</a></p>
+                    <p><a href="mailto:im@baejino.com">의견이 있으세요?</a></p>
+                    <p><a href="https://baejino.com/assets/images/donate.png">커피한잔 사주세요!</a></p>
                 </div>
             </div>
         </div>
@@ -72,7 +72,7 @@
                             closedir($dh);
                         }
                     } else {
-                        echo "<p>ERROR / 제작자에게 <a href=\"mailto:bae_alex@naver.com\">문의</a>하세요.</p>";
+                        echo "<p>ERROR / 제작자에게 <a href=\"mailto:im@baejino.com\">문의</a>하세요.</p>";
                     }
                     echo "
                     <script type='text/javascript'>
@@ -83,7 +83,7 @@
         </div>
     </div>
     <footer>
-        <p>Copyright &copy; 2019 <a href="https://www.blex.kr">BLEX.</a></p>
+        <p>Copyright &copy; 2019 <a href="https://baejino.com">BaeJino.</a></p>
     </footer>
     <script type="text/javascript">
         document.getElementById('default_focus').focus();

@@ -39,8 +39,8 @@
                     <a class="close_btn" href="./"><i class="fas fa-times"></i></a>
                     <p><a href="#Source">소스코드 삽입</a></p>
                     <hr>
-                    <p><a href="mailto:bae_alex@naver.com">의견이 있으세요?</a></p>
-                    <p><a href="https://www.blex.kr/donate-kakaopay">커피한잔 사주세요!</a></p>
+                    <p><a href="mailto:im@baejino.com">의견이 있으세요?</a></p>
+                    <p><a href="https://baejino.com/assets/images/donate.png">커피한잔 사주세요!</a></p>
                 </div>
             </div>
             <div class="source_modal" id="Source">
@@ -72,7 +72,7 @@
         </div>
     </div>
     <footer>
-        <p>Copyright &copy; 2019 <a href="https://www.blex.kr">BLEX.</a></p>
+        <p>Copyright &copy; 2019 <a href="https://baejino.com">BaeJino.</a></p>
     </footer>
     <script type="text/javascript">
         document.getElementById('default_focus').focus();
