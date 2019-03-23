@@ -1,7 +1,9 @@
 <?php
     extract($_POST);
 
-    if($memo == "baealex") {
+    $passwd = "baealex";
+
+    if($memo == $passwd) {
         session_start();
         $_SESSION['auth'] = "auth-success";
         echo "<script>alert('안녕하세요. 관리자님 :)')</script>"; 
