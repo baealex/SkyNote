@@ -104,6 +104,9 @@ server {
   - 카피라이트 문구 변경
   - 이메일 주소 변경
 
+- 2019-03-24
+  - 가독성을 위한 패스워드 변수 추가
+
 ## 개발자 정보	
 
 Jino Bae. – [BLOG](https://baejino.com) – im@baejino.com
