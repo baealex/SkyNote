@@ -7,9 +7,9 @@
         $dir = date("Y-m-d");
         if(!is_dir($dir)) {
             mkdir($dir);
-            copy('assets/copy/index.php', $dir.'/index.php');
-            copy('assets/copy/write.php', $dir.'/write.php');
-            copy('assets/copy/memo.txt', $dir.'/memo.txt');
+            copy('copy/index/index.php', $dir.'/index.php');
+            copy('copy/write/write.php', $dir.'/write.php');
+            copy('copy/memo/memo.txt', $dir.'/memo.txt');
             echo "<script>alert('오늘의 메모가 생성되었습니다.')</script>"; 
         }
         else {
