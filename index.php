@@ -1,22 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head lang="ko">
-    <title>NotePHPad</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#035">
+    <?php include_once 'assets/layout/head.html'?>
     <link rel="icon" href="./assets/favicon.ico">
     <link rel="icon" type="image/png" href="./assets/favicon.png">
     <link rel="stylesheet" href="./assets/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.2/codemirror.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.2/theme/dracula.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.2/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.2/addon/runmode/runmode.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.2/mode/meta.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.2/addon/mode/loadmode.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.2/addon/mode/overlay.min.js"></script>
 </head>
 <body>
     <div id="body">
@@ -82,37 +70,6 @@
             ?>
         </div>
     </div>
-    <footer>
-        <p>Copyright &copy; 2019 <a href="https://baejino.com">BaeJino.</a></p>
-    </footer>
-    <script type="text/javascript">
-        document.getElementById('default_focus').focus();
-    </script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
-    <script type="text/javascript">
-    $(document).ready(function(){
-        input_box = document.getElementById("input_box");
-        $(window).scroll(function () {
-            if ($(this).scrollTop() < 200) {
-                input_box.style.position="absolute";
-                input_box.style.top="70px";
-                $("#input_box").removeClass("slide_bottom");
-            } else {
-                input_box.style.position="fixed";
-                input_box.style.top="-10px";
-                $("#input_box").addClass("slide_bottom");
-            }
-        }); 
-    }); 
-    </script>
-    <script type="text/javascript">
-    var textarea = document.getElementById('source_code');
-    var editor = CodeMirror.fromTextArea(textarea, {
-        lineNumbers: true,
-        lineWrapping: true,
-        theme: "dracula",
-        val: textarea.value
-    });
-    </script>
+    <?php include_once 'assets/layout/footer.html'?>
 </body>
 </html>
