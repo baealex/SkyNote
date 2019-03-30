@@ -14,7 +14,7 @@
     </button>
     <div class="menu_modal" id="Menu">
         <div>
-            <a class="close_btn" href="./"><i class="fas fa-times"></i></a>
+            <a class="close_btn" href="#"><i class="fas fa-times"></i></a>
             <p><a href="#Source">소스코드 삽입</a></p>
             <hr>
             <p><a href="mailto:im@baejino.com">의견이 있으세요?</a></p>
@@ -24,11 +24,10 @@
     <div class="source_modal" id="Source">
         <div>
             <form method="post" action="write.php">
-                <textarea id="source_code" name="source"
-                    placeholder="```&#13;&#10;#include <iostream>&#13;&#10;int main(void)&#13;&#10;{&#13;&#10;    int a = 0;&#13;&#10;    std::cout << a << std::endl;&#13;&#10;    return 0;&#13;&#10;}&#13;&#10;```"></textarea>
+                <textarea id="source_code" name="source"></textarea>
                 <p>
                     <button name="submit" id="submit"><i class="fas fa-check"></i></button>
-                    <a class="close_btn" href="./"><i class="fas fa-times"></i></a>
+                    <a class="close_btn" href="#"><i class="fas fa-times"></i></a>
                 </p>
             </form>
         </div>
