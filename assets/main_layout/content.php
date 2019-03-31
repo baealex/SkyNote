@@ -29,7 +29,7 @@ function show_memo_list() {
                     $fr = fopen("$file/memo.txt", "r");
                     $text = fread($fr, filesize("$file/memo.txt"));
                     $text = strip_tags($text);
-                    $descript = substr($text, 0, 30);
+                    $descript = mb_substr($text, 0, 20);
                     echo "<li><p><a href='".$dir.$file."'>".$file."</a> : $descript...</p></li>";
                 }
             }
