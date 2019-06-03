@@ -1,5 +1,5 @@
 <div id="input_box">
-    <form id="main_form" onsubmit="return false">
+    <form onsubmit="return false">
         <input id="default_focus" autocomplete="off" type="text" name="memo" onkeydown="JavaScript:Enter_Check();">
     </form>
 </div>
@@ -23,10 +23,10 @@
     </div>
     <div class="source_modal" id="Source">
         <div>
-            <form method="post" action="write.php">
+            <form onsubmit="return false">
                 <textarea id="source_code" name="source"></textarea>
                 <p>
-                    <button name="submit" id="submit"><i class="fas fa-check"></i></button>
+                    <button onclick="runWrite()"><i class="fas fa-check"></i></button>
                     <a class="close_btn" href="#"><i class="fas fa-times"></i></a>
                 </p>
             </form>
