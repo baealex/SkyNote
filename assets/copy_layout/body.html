@@ -1,6 +1,6 @@
 <div id="input_box">
-    <form method="post" action="./write.php">
-        <input id="default_focus" autocomplete="off" type="text" name="memo">
+    <form id="main_form" onsubmit="return false">
+        <input id="default_focus" autocomplete="off" type="text" name="memo" onkeydown="JavaScript:Enter_Check();">
     </form>
 </div>
 <div class="info_box">

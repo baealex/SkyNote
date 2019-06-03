@@ -9,7 +9,7 @@
         <?php include_once '../assets/copy_layout/body.html'?>
         <?php include_once '../assets/copy_layout/content.php'?>
     </div>
-    <?php include_once '../assets/common_layout/footer.html'?>
     <?php include_once '../assets/copy_layout/footer.php'?>
+    <?php include_once '../assets/common_layout/footer.html'?>
 </body>
 </html>

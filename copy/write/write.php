@@ -1,13 +1,10 @@
 <?php
     include "../lib/parsedown.php";
-    extract($_POST);
+    
+    $memo = $_POST['memo'];
 
     $fr = fopen("memo.txt", "r");
     $text = fread($fr, filesize("memo.txt"));
-
-    if($memo !== "현재 메모 다운") {
-        include "index.php";
-    }
 
     if($memo == "로그아웃" || $memo == "잠금") {
         session_start();
@@ -75,5 +72,5 @@
         }
     }
 
-    echo "<script>document.location.href='./';</script>"; 
+    echo readfile("memo.txt");
 ?>
