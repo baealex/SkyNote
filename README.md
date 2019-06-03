@@ -110,6 +110,9 @@ server {
 - 2019-03-27
   - 레이아웃 동적으로 로딩
 
+- 2019-06-03
+  - Ajax를 이용한 새로고침 최소화
+
 ## 개발자 정보	
 
 Jino Bae. – [BLOG](https://baejino.com) – im@baejino.com
