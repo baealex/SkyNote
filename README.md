@@ -6,7 +6,7 @@
 
 ## 설치 방법	
 
-웹서버(Nginx)와 PHP7이 필요합니다.
+웹서버(Nginx)와 PHP7이 필요합니다. [데모 페이지](http://blex.kr/n/d)
 
 ```
 sudo apt-get install nginx php7-fpm
@@ -51,15 +51,11 @@ apt install php-mbstring
 
 예전부터 한 서버에서 여러개의 도메인을 사용할 수 없는지 궁금했습니다. '네임서버'를 구현해야 한다부터 다양한 답변을 들었지만 너무 벅차보이는 일이었죠. 하지만 웹서버에서 정말 간단하게 '가상 호스팅'이라는 것을 사용할 수 있다는 것을 알았습니다. 그리고 바로 만들어 낸 것이 바로 이 `NotePHPad`!
 
-<br>
+![bandicam 2019-01-20 13-21-42-773](https://user-images.githubusercontent.com/35596687/51435234-6a074e00-1cb6-11e9-8b18-47e1f5901e70.png)
 
 이름에서 알 수 있듯 `NotePHPad`는 `PHP`를 사용하여 기록하는 웹 메모장입니다. 요즘처럼 개인정보에 민감한 시대에 누굴 믿고 자신의 메모를 내어줄 수 있을까요? 당신의 웹서버에서 당신만을 위한 페이지를 개설해 보세요!
 
-<br/>
-
-![bandicam 2019-01-20 13-21-42-773](https://user-images.githubusercontent.com/35596687/51435234-6a074e00-1cb6-11e9-8b18-47e1f5901e70.png)
-
-<br/>
+![notephpad](https://user-images.githubusercontent.com/35596687/62865286-05423c80-bd49-11e9-8ef8-9cf7b7208bdd.gif)
 
 심플하게 로그인을 하고 심플하게 작성하고 심플하게 살펴보고 심플하게 메모를 다운로드하고 심플하게 메모를 삭제할 수 있습니다! 이 작품은 반응형으로 구현되어 어느기기 어느 화면에서나 가독성 좋은 공책과 같은 모습을 보여줍니다.
 
