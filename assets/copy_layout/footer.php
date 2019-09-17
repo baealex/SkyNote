@@ -11,15 +11,14 @@ function runWrite() {
     $.ajax({
         url: "write.php",
         type: "post",
-        data: $("form").serialize(),
+        data: "memo="+$('input[name=memo]').val()+"&source="+$('textarea[name=source]').val(),
     }).done(function(data) {
         document.getElementById('co').innerHTML = data;
+		$('textarea[name=source]').val('');
         window.scrollTo(0,screen.height+9999);
     });
 }
-</script>
-<script>
-function Enter_Check(){
+function Enter_Check() {
     if(event.keyCode == 13){
         runWrite();
         document.getElementById('default_focus').value = "";
