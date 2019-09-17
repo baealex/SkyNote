@@ -26,14 +26,18 @@ function show_memo_list() {
         if($dh = opendir($dir)) {
             while(($file = readdir($dh)) !== false) {
                 if(( $file !== '.well-known' && strpos($file,'-'))) {
-                    $fr = fopen("$file/memo.txt", "r");
-                    $text = fread($fr, filesize("$file/memo.txt"));
-                    $text = strip_tags($text);
-                    $descript = mb_substr($text, 0, 20);
-                    echo "<li><p><a href='".$dir.$file."'>".$file."</a> : $descript...</p></li>";
+                    $files[] = $file;
                 }
             }
             closedir($dh);
+            natsort($files);
+            foreach($files as $file) {
+                $fr = fopen("$file/memo.txt", "r");
+                $text = fread($fr, filesize("$file/memo.txt"));
+                $text = strip_tags($text);
+                $descript = mb_substr($text, 0, 20);
+                echo "<li><p><a href='".$dir.$file."/'>".$file."</a> : $descript...</p></li>";
+            }
         }
     } else {
         echo "<p>ERROR / 제작자에게 <a href=\"mailto:im@baejino.com\">문의</a>하세요.</p>";

@@ -2,7 +2,7 @@
     <?php
         session_start();
         if(!isset($_SESSION['auth'])) {
-            echo "<script>document.location.href='/';</script>";
+            echo "<script>document.location.href='../';</script>";
         }
         else {
             readfile("memo.txt");
