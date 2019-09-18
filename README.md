@@ -115,6 +115,10 @@ apt install php-mbstring
 - 2019-06-03
   - Ajax를 이용한 새로고침 최소화
 
+- 2019-09-17
+  - 메모 목록 정렬
+  - 소스코드 메모 개선
+
 ## 개발자 정보	
 
 Jino Bae. – [BLOG](https://baejino.com) – im@baejino.com

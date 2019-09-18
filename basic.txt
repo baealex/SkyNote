@@ -1,4 +1,4 @@
-<li><h3>NotePHPad 0.0.12</h3></li>
+<li><h3>NotePHPad 0.1.0</h3></li>
 <li><br/></li>
 <li><p>웹에서 가장 아름답게 메모하는 방법,</p></li>
 <li><p>NotePHPad를 사용하는 것입니다.</p></li>
