@@ -1,0 +1,380 @@
+@charset "utf-8";
+
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+@font-face { font-family: 'RIDIBatang'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+i {
+    font-family: fontawesome !important;
+}
+
+@keyframes slide_bottom {0% {top: -100px;}100% {top: -10px;}}
+@-moz-keyframes slide_bottom {0% {top: -100px;}100% {top: -10px;}}
+@-webkit-keyframes slide_bottom {0% {top: -100px;}100% {top: -10px;}}
+@-o-keyframes slide_bottom {0% {top: -100px;}100% {top: -10px;}}
+
+@keyframes slide_left {0% {right: -220px;}100% {right: 0px;}}
+@-moz-keyframes slide_left {0% {right: -220px;}100% {right: 0px;}}
+@-webkit-keyframes slide_left {0% {right: -220px;}100% {right: 0px;}}
+@-o-keyframes slide_left {0% {right: -220px;}100% {right: 0px;}}
+
+::-webkit-scrollbar
+{ 
+    display: none; 
+}
+
+.slide_bottom
+{
+    animation: slide_bottom .5s 1;
+    -moz-animation: slide_bottom .5s 1;
+    -webkit-animation: slide_bottom .5s 1;
+    -o-animation: slide_bottom .5s 1;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, button, p, blockquote, pre, code, a, abbr, acronym, address, big, cite, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+{
+    font-family: 'RIDIBatang', 나눔바른고딕, NanumBarunGothic, 나눔바른고딕OTF, NanumBarunGothicOTF, '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Noto+Sans',  'notokr-demilight',  '맑은 고딕', 'Malgun Gothic', 'Helvetica Neue', Helvetica, Dotum, '돋움', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+button
+{
+    border: 0 none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+body {
+    background:#035;
+}
+
+#body {
+    overflow: hidden;
+    margin:0 auto;
+    margin-top: 150px;
+    width:50%;
+    background:#fff;
+    border-radius: 15px;
+}
+
+.info_box > button {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    left: 5px;
+    top: 5px;
+}
+
+.menu_box > button {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 5px;
+    top: 5px;
+}
+
+.info_box > button > a > i {
+    color: #fff;
+    font-size: 30px;
+}
+
+.menu_box > button > a > i {
+    color: #fff;
+    font-size: 30px;
+}
+
+#input_box {
+    position: absolute;
+    width: 50%;
+    height: 100px;
+    top: 70px;
+    text-align: center;
+    background: #fc0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#input_box > form > input {
+    font-size: 1.1em;
+    height: 60px;
+    width: 96%;
+    min-width: 96%;
+    margin-top: 25px;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 0;
+    line-height: 15px;
+    background-color: transparent;
+    color: black;
+    border: none;
+    outline: none;
+}
+
+.content {
+    padding: 37px 40px;
+    min-height: 500px;
+}
+
+.content > * {
+    background: url(//cdn.jsdelivr.net/gh/kaniwari/notes@2.0b2b/resources/object_line_light.svg) 0 0/37px 37px;
+    line-height: 37px !important;
+    font-size: 0.87em;
+    margin-bottom: 0;
+    padding: 0 4px;
+}
+
+.content li {
+    line-height: 37px !important;
+    margin-left: 15px;
+}
+
+.content > h1 {
+    color:#f40;
+}
+
+.content > h2 {
+    color:#f80;
+}
+
+.content > h3 {
+    color:#fc0;
+}
+
+.content > h4 {
+    color:#0a3;
+}
+
+.content > h5 {
+    color:#06f;
+}
+
+.content > h6 {
+    color:#c6f;
+}
+
+.content > p > b {
+    font-weight: normal;
+    background-color: #fff2bd;
+}
+
+.content > p > a {
+    text-decoration: none;
+    color: #000;
+    transition: box-shadow .5s;
+    box-shadow: inset 0 -4px 0 #fc0;
+}
+
+.content > p > a:hover {
+    box-shadow: inset 0 -40px 0 #fc0;
+}
+
+.content > pre {
+    background-color: #eee;
+    white-space: pre-wrap;
+    border-radius: 5px;
+}
+
+.content > p > code {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.content > p > img {
+    max-width: 100%;
+}
+
+footer {
+    margin: 45px 0;
+    text-align: center;
+}
+
+footer > p {
+    color:#fff;
+}
+
+footer > p > a {
+    color: #fc0;
+    text-decoration: none;
+}
+
+.source_code {
+    opacity: 0;
+}
+
+.source_code:target {
+    opacity: 1;
+}
+
+.menu_modal {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity:0;
+    background: rgba(0,0,0,.8);
+    -webkit-transition: opacity .4s ease-in;
+    -moz-transition: opacity .4s ease-in;
+    transition: opacity .4s ease-in;
+    pointer-events: none;
+}
+
+.menu_modal:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.menu_modal > div {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 220px;
+	height: 100%;
+    padding: 30px;
+    border-radius: 0px;
+	background-color: white;
+    overflow: auto;
+}
+
+.menu_modal:target > div {
+    animation: slide_left .5s 1;
+    -moz-animation: slide_left .5s 1;
+    -webkit-animation: slide_left .5s 1;
+    -o-animation: slide_left .5s 1;
+}
+
+.menu_modal > div > .close_btn {
+    position: fixed;
+    top: 12px;
+    right: 300px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.menu_modal > div > p {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.08em;
+}
+
+.menu_modal > div > hr {
+    margin-bottom: 30px;
+}
+
+.menu_modal > div > p > a {
+    text-decoration: none;
+    color: #777;
+}
+
+.menu_modal > div > p > a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.source_modal {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    -webkit-transition: opacity .4s ease-in;
+    -moz-transition: opacity .4s ease-in;
+    transition: opacity .4s ease-in;
+    pointer-events: none;
+}
+
+.source_modal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.source_modal > div {
+	position: absolute;
+	top: 26%;
+    left: 30%;
+    right: 30%;
+	width: auto;
+    height: auto;
+	border-radius: 5px;
+	background-color: #282A36;
+    overflow: auto;
+}
+
+.source_modal > div > form > p {
+    padding: 20px;
+}
+
+.source_modal > div a {
+    float: right;
+}
+
+.source_modal i {
+    font-size: 25px;
+    color: #777;
+}
+
+.source_modal i:hover {
+    color: #fff;
+}
+
+.source_modal > div > form > p > input {
+    float: right;
+}
+
+#source_code {
+    width: 100%;
+    height: 30vh;
+    background-color: #282A36;
+    color: #fff;
+    padding: 15px 0px 15px 15px;
+    border: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+    #body {
+        width: 95%;
+        margin-top: 130px;
+    }
+
+    .info_box > button {
+        position: absolute;
+    }
+    
+    .menu_box > button {
+        position: absolute;
+    }
+
+    #input_box {
+        width: 95%;
+        height: calc(37px * 2);
+    }
+
+    #input_box > form > input {
+        font-size: 1em;
+        margin-top: 12px;
+        padding: 12px;
+    }
+
+    .content {
+        padding: 37px 20px;
+    }
+
+    .menu_modal > div > p {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .source_modal > div {
+        position: absolute;
+        top: 25%;
+        left: 5%;
+        right: 5%;
+    }
+}
